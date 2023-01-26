@@ -1,1 +1,13 @@
+name: Ouput Issue Event Details
 
+on:  
+ issues:
+#  types: [opened, edited, milestoned]
+ 
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ouput event data
+        run: echo "${{ toJSON(github.event) }}"
